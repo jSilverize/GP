@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <!-- Define o enconding -->
+    <meta charset="utf-8" />
+
+    <!-- Oferece suporte a versões bugadas do Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Define que a página será visualizada em escala 1 e não terá ZOOM com o mouse -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!-- São os detalhes da página, para fins de buscadores de internet -->
+    <meta name="description" content="Gerencie seus produtos de maneira simples e intuitiva" />
+
+    <!-- Diz quem é o autor da página, para fins de compartilhamento e documentação -->
+    <meta name="author" content="Luciano Lourenço" />
+
+    <title>
+      GP | Manuseio de Produtos
+    </title>
+
+    <!-- Ícone que aparece na aba browser -->
+    <link rel="icon" href="img/favicon.ico">
+
+    <!-- CSS base, com as regras de estilos comuns entre todas as páginas -->
+    <link rel="stylesheet" type="text/css" href="css/gp-base.css" />
+    <link rel="stylesheet" type="text/css" href="css/gp-menu.css" />
+
+    <!-- CSS exclusivo para esta página, com regras aplicadas somente nela -->
+    <link rel="stylesheet" type="text/css" href="css/gp-produtos.css" />
+
+  </head>
+
+  <body>
+    
+    <!-- =================================================================================================== -->
+
+
+    <menu>
+
+      <main>
+
+        <input type="checkbox" id="control-nav" />
+        <label for="control-nav" class="control-nav"></label>
+        <label for="control-nav" class="control-nav-close"></label>
+
+        <nav>
+          <ul class="l2">
+            <li>
+              <a href="index.html"
+                 title=""
+                 >
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a href=""
+                 title=""
+                 >
+                Ajuda
+              </a>
+            </li>
+
+            <li>
+              <a href="produtos.html"
+                 title=""
+                 >
+                Gerenciar Produtos
+              </a>
+            </li>
+
+            <li>
+              <a href=""
+                 title=""
+                 >
+                Registrar-se
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+      </main>
+
+    </menu>
+
+
+    <!-- =================================================================================================== -->
+
+
+    <!-- Início: Cabeçalho da página -->
+    <header>
+
+      <!-- Início: 'main' coloca o conteúdo da página ao centro e atribui uma largura padrão -->
+      <main>
+
+        <h1>
+          GP
+          <small id="paginaTitulo">
+            <!-- Texto do título será atribuído via JS -->
+          </small>
+        </h1>
+
+      </main>
+      <!-- Fim: 'main' coloca o conteúdo da página ao centro e atribui uma largura padrão -->
+
+    </header>
+    <!-- Fim: Cabeçalho da página -->
+
+
+    <!-- =================================================================================================== -->
+
+
+    <!-- Início: Section divide a página e seções, para termos uma distribuição de conteúdo mais limpa -->
+    <section>
+
+      <!-- Início: Main coloca o conteúdo da página ao centro e atribui uma largura padrão -->
+      <main>
+
+        <h1>					
+          Escolha uma das <strong>opções abaixo</strong>
+        </h1>
+
+        <!-- Início: GRADE-3 proporciona uma linha com 3 colunas -->
+        <div class="grade-3 menu-produtos">
+
+          <!-- Início: Coluna #1 -->
+          <div class="texto-centro">
+
+            <div class="padding-15-h">
+
+              <a href="produtos/catalogo.html">
+
+                <img class="centralizar"
+                     src="img/lista.svg"
+                     alt=""
+                     />
+
+                <h3>
+                  Listar Todos
+                </h3>
+
+              </a>
+
+            </div>
+
+          </div>
+          <!-- Fim: Coluna #1 -->
+
+          <!-- Início: Coluna #2 -->
+          <div class="texto-centro">
+
+            <div class="padding-15-h">
+
+              <a href="produtos/buscar.html">
+
+                <img class="centralizar"
+                     src="img/servidores-nuvem.svg"
+                     alt=""
+                     />
+
+                <h3>
+                  Buscar &amp; Editar
+                </h3>
+
+              </a>
+
+            </div>
+
+          </div>
+          <!-- Fim: Coluna #2 -->
+
+          <!-- Início: Coluna #3 -->
+          <div class="texto-centro">
+
+            <div class="padding-15-h">
+
+              <a href="produtos/cadastrar-novo.html">
+
+                <img class="centralizar"
+                     src="img/editar-mapa.svg"
+                     alt=""
+                     />
+
+                <h3 id="oi">
+                  Cadastrar Novo
+                </h3>      
+
+              </a>
+
+            </div>
+
+          </div>
+          <!-- Fim: Coluna #3 -->
+
+        </div>
+        <!-- Fim: GRADE-3 proporciona uma linha com 3 colunas -->
+
+      </main>
+      <!-- Fim: Main coloca o conteúdo da página ao centro e atribui uma largura padrão -->
+
+    </section>
+    <!-- Fim: Section divide a página e seções, para termos uma distribuição de conteúdo mais limpa -->
+
+
+    <!-- Início: Section divide a página e seções, para termos uma distribuição de conteúdo mais limpa -->
+    <section>
+
+      <!-- Início: Main coloca o conteúdo da página ao centro e atribui uma largura padrão -->
+      <main>
+
+        <h1>					
+          Você <strong>sabia</strong> disso?
+        </h1>
+
+        <!-- Início: GRADE-2 proporciona uma linha com 2 colunas -->
+        <div class="grade-2">
+
+          <!-- Início: Coluna #1 -->
+          <div>
+
+            <h3>
+              Dica #1
+            </h3>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+              ad minim veniam, quis nostrud exercitation ullamco laboris.
+            </p>
+
+          </div>
+          <!-- Fim: Coluna #1 -->
+
+          <!-- Início: Coluna #2 -->
+          <div>
+
+            <h3>
+              Dica #2
+            </h3>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+              ad minim veniam, quis nostrud exercitation ullamco laboris.
+            </p>
+
+          </div>
+          <!-- Fim: Coluna #2 -->
+
+        </div>
+        <!-- Fim: GRADE-2 proporciona uma linha com 2 colunas -->
+
+      </main>
+      <!-- Fim: Main coloca o conteúdo da página ao centro e atribui uma largura padrão -->
+
+    </section>
+    <!-- Fim: Section divide a página e seções, para termos uma distribuição de conteúdo mais limpa -->
+
+
+    <!-- =================================================================================================== -->
+
+
+    <!-- Início: rodapé de páginas -->
+    <footer>
+
+      <!-- Início: 'main' coloca o conteúdo da página ao centro e atribui uma largura padrão -->
+      <main>
+
+        <span class="direitos-copia">						
+          &copy;
+          <strong>
+            [L|S]
+          </strong>
+          Tecnologia e Inovação
+          -
+          <span id="exibirAnoAtual">
+            <!-- O ano atual será inserido aqui com JS -->
+          </span>
+        </span>
+
+      </main>
+      <!-- Fim: 'main' coloca o conteúdo da página ao centro e atribui uma largura padrão -->
+
+    </footer>
+    <!-- Fim: rodapé de páginas -->
+
+
+    <!-- =================================================================================================== -->
+
+
+    <!-- JS base, com os comandos comuns entre todas as páginas -->
+    <script type="text/javascript" src="js/gp-base.js"></script>
+
+  </body>
+
+</html>

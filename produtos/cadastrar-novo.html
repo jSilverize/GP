@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <!-- Define o enconding -->
+    <meta charset="utf-8" />
+
+    <!-- Oferece suporte a versões bugadas do Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Define que a página será visualizada em escala 1 e não terá ZOOM com o mouse -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!-- São os detalhes da página, para fins de buscadores de internet -->
+    <meta name="description" content="Gerencie seus produtos de maneira simples e intuitiva" />
+
+    <!-- Diz quem é o autor da página, para fins de compartilhamento e documentação -->
+    <meta name="author" content="Luciano Lourenço" />
+
+    <title>
+      GP | Cadastrar Produto
+    </title>
+
+    <!-- Ícone que aparece na aba browser -->
+    <link rel="icon" href="../img/favicon.ico">
+
+    <!-- CSS base, com as regras de estilos comuns entre todas as páginas -->
+    <link rel="stylesheet" type="text/css" href="../css/gp-base.css" />
+    <link rel="stylesheet" type="text/css" href="../css/gp-menu.css" />
+
+    <!-- CSS exclusivo para esta página, com regras aplicadas somente nela -->
+    <link rel="stylesheet" type="text/css" href="../css/gp-formularios.css" />
+    <link rel="stylesheet" type="text/css" href="../css/gp-cropbox.css" />
+
+  </head>
+
+  <body>
+    
+    <!-- =================================================================================================== -->
+
+
+    <menu>
+
+      <main>
+
+        <input type="checkbox" id="control-nav" />
+        <label for="control-nav" class="control-nav"></label>
+        <label for="control-nav" class="control-nav-close"></label>
+
+        <nav>
+          <ul class="l2">
+            <li>
+              <a href="../index.html"
+                 title=""
+                 >
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a href=""
+                 title=""
+                 >
+                Ajuda
+              </a>
+            </li>
+
+            <li>
+              <a href="../produtos.html"
+                 title=""
+                 >
+                Gerenciar Produtos
+              </a>
+            </li>
+
+            <li>
+              <a href=""
+                 title=""
+                 >
+                Registrar-se
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+      </main>
+
+    </menu>
+
+
+    <!-- =================================================================================================== -->
+
+
+    <!-- Início: Cabeçalho da página -->
+    <header>
+
+      <!-- Início: 'main' coloca o conteúdo da página ao centro e atribui uma largura padrão -->
+      <main>
+
+        <h1>
+          GP
+          <small id="paginaTitulo">
+            <!-- Texto do título será atribuído via JS -->
+          </small>
+        </h1>
+
+      </main>
+      <!-- Fim: 'main' coloca o conteúdo da página ao centro e atribui uma largura padrão -->
+
+    </header>
+    <!-- Fim: Cabeçalho da página -->
+
+
+    <!-- =================================================================================================== -->
+
+
+    <!-- Início: Section divide a página e seções, para termos uma distribuição de conteúdo mais limpa -->
+    <section>
+
+      <!-- Início: Main coloca o conteúdo da página ao centro e atribui uma largura padrão -->
+      <main>
+
+        <h1>					
+          Dados do seu novo produto
+        </h1>
+
+        <form class="formulario formulario-produtos"
+              method="POST" action="visualizar.html">
+
+          <!-- Início: GRADE-2 proporciona uma linha com 2 colunas -->
+          <div class="grade-2 menu-produtos">
+
+            <!-- Início: Coluna #1 -->
+            <div>
+
+              <div class="padding-10-h">
+
+
+                <label for="produtoTitulo">
+                  Título:
+                </label>              
+                <input tabindex="1" type="text"
+                       id="produtoTitulo" name="produtoTitulo"
+                       placeholder="Ex.: Camiseta Estampada" />
+
+
+                <label for="produtoPreco">
+                  Preço unitário:
+                </label>              
+                <input tabindex="2" type="text"
+                       id="produtoPreco" name="produtoPreco"
+                       placeholder="Ex.: R$ 25,00" />
+
+
+                <label for="produtoQuantidade">
+                  Quantidade em estoque:
+                </label>
+                <input tabindex="3" type="number"
+                       id="produtoQuantidade" name="produtoQuantidade"
+                       placeholder="Ex.: 150" />
+
+
+                <label for="produtoCategoria">
+                  Categoria:
+                </label>
+                <select tabindex="4"
+                        id="produtoCategoria" name="produtoCategoria">
+                  <option>
+                    Criar as options via JSON
+                  </option>
+                </select>
+
+
+                <label for="produtoDescricao">
+                  Descrição:
+                </label>
+                <textarea tabindex="5"
+                          id="produtoDescricao" name="produtoDescricao"
+                          rows="6" placeholder="Ex.: Tecido algodão com acabamento bla bla bla"></textarea>
+
+              </div>
+
+            </div>
+            <!-- Fim: Coluna #1 -->
+
+            <!-- Início: Coluna #2 -->
+            <div>
+
+              <div class="padding-10-h">
+
+
+                <label for="produtoImagem">
+                  Imagem para exibição:
+                </label>
+                <input tabindex="6" type="file" 
+                       id="produtoImagem" name="produtoImagem"
+                       />
+
+                <div style="padding: 15px 0px;"></div>
+
+                <div class="cropped oculto"></div>
+
+                <div class="crop-container oculto">
+
+                  <div class="imageBox">
+                    <div class="thumbBox"></div>
+                    <div class="spinner" style="display: none">
+                      Carregando...
+                    </div>
+                  </div>
+
+                  <button type="button" class="botao" id="btnZoomOut">
+                    -
+                  </button>
+                  <button type="button" class="botao" id="btnZoomIn">
+                    +
+                  </button>
+                  <button type="button" class="botao" id="btnCrop">
+                    Cortar Imagem
+                  </button>
+
+                </div>
+
+              </div>
+
+            </div>
+            <!-- Fim: Coluna #2 -->
+
+          </div>
+          <!-- Fim: GRADE-2 proporciona uma linha com 2 colunas -->
+
+          
+          <br style="clear: both;" />
+          
+
+          <!-- Início: GRADE-2 proporciona uma linha com 2 colunas -->
+          <div class="grade-2 menu-produtos">
+
+            <!-- Início: Coluna #1 -->
+            <div>
+
+              <div class="padding-15-v">
+
+                <button type="reset" tabindex="8" id="zerar" class="botao botao-grande centralizar">
+                  &times;
+                  Limpar
+                </button>
+
+              </div>
+
+            </div>
+            <!-- Fim: Coluna #1 -->
+
+            <!-- Início: Coluna #2 -->
+            <div>
+
+              <div class="padding-15-v">
+
+                <button type="submit" tabindex="7" class="botao botao-grande botao-primario centralizar">
+                  Salvar
+                  &uparrow;
+                </button>
+
+              </div>
+
+            </div>
+            <!-- Fim: Coluna #2 -->
+
+          </div>
+          <!-- Fim: GRADE-2 proporciona uma linha com 2 colunas -->
+          
+          
+
+        </form>
+
+      </main>
+      <!-- Fim: Main coloca o conteúdo da página ao centro e atribui uma largura padrão -->
+
+    </section>
+    <!-- Fim: Section divide a página e seções, para termos uma distribuição de conteúdo mais limpa -->
+
+
+    <!-- =================================================================================================== -->
+
+
+    <!-- Início: rodapé de páginas -->
+    <footer>
+
+      <!-- Início: 'main' coloca o conteúdo da página ao centro e atribui uma largura padrão -->
+      <main>
+
+        <span class="direitos-copia">						
+          &copy;
+          <strong>
+            [L|S]
+          </strong>
+          Tecnologia e Inovação
+          -
+          <span id="exibirAnoAtual">
+            <!-- O ano atual será inserido aqui com JS -->
+          </span>
+        </span>
+
+      </main>
+      <!-- Fim: 'main' coloca o conteúdo da página ao centro e atribui uma largura padrão -->
+
+    </footer>
+    <!-- Fim: rodapé de páginas -->
+
+
+    <!-- =================================================================================================== -->
+
+
+    <!-- JS base, com os comandos comuns entre todas as páginas -->
+    <script type="text/javascript" src="../js/gp-base.js"></script>
+
+    <!-- JS exclusivo para esta página -->
+    <script type="text/javascript" src="../js/gp-cropbox.js"></script>    
+    <script type="text/javascript" src="../js/gp-cropbox-config.js"></script>
+
+  </body>
+
+</html>
