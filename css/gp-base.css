@@ -59,7 +59,7 @@ footer {
 footer main {
   padding-top: 100px;
   padding-bottom: 100px;
-  background-image: url('../img/gp-logo_v2.svg');
+  background-image: url('../img/gp-logo.svg');
   background-size: 100px;
   background-position: 15px center;
   background-repeat: no-repeat;
@@ -79,7 +79,7 @@ main {
     width: 860px;
   }
   header > main:first-of-type {    
-    background-image: url('../img/gp-logo_v2.svg');
+    background-image: url('../img/gp-logo.svg');
     background-size: 128px;
     background-position: left 90px;
     background-repeat: no-repeat;
@@ -302,3 +302,19 @@ section main h1::after {
   font-weight: normal;
 }
 /* Definicoes de botoes */
+
+
+.imagem-responsiva {
+  display: block;
+  max-width: 100%;
+  height: auto;  
+}
+
+.imagem-redonda {
+  border-radius: 50%;
+  border: 5px solid #2B80FF;
+}
+
+.texto-primario {
+  color: #2B80FF;
+}

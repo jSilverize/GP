@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <!-- Define o enconding -->
+    <meta charset="utf-8" />
+
+    <!-- Oferece suporte a versões bugadas do Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Define que a página será visualizada em escala 1 e não terá ZOOM com o mouse -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!-- São os detalhes da página, para fins de buscadores de internet -->
+    <meta name="description" content="Gerencie seus produtos de maneira simples e intuitiva" />
+
+    <!-- Diz quem é o autor da página, para fins de compartilhamento e documentação -->
+    <meta name="author" content="@LucianoLourenco and @jSilverize" />
+
+    <title>
+      GP | Catálogo de Títulos
+    </title>
+
+    <!-- Ícone que aparece na aba browser -->
+    <link rel="icon" href="../img/favicon.ico">
+
+    <!-- CSS base, com as regras de estilos comuns entre todas as páginas -->
+    <link rel="stylesheet" type="text/css" href="../css/gp-base.css" />
+    <link rel="stylesheet" type="text/css" href="../css/gp-menu.css" />
+
+    <!-- CSS exclusivo para esta página, com regras aplicadas somente nela -->
+    <link rel="stylesheet" type="text/css" href="../css/gp-produtos.css" />
+
+  </head>
+
+  <body>
+
+    <!-- =================================================================================================== -->
+
+
+    <menu>
+
+      <main>
+
+        <input type="checkbox" id="control-nav" />
+        <label for="control-nav" class="control-nav"></label>
+        <label for="control-nav" class="control-nav-close"></label>
+
+        <nav>
+          <ul>
+            <li>
+              <a href="../index.html"
+                 title=""
+                 >
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a href="../produtos.html"
+                 title=""
+                 >
+                Gerenciar Títulos
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+
+      </main>
+
+    </menu>
+
+
+    <!-- =================================================================================================== -->
+
+
+    <!-- Início: Cabeçalho da página -->
+    <header>
+
+      <!-- Início: 'main' coloca o conteúdo da página ao centro e atribui uma largura padrão -->
+      <main>
+
+        <h1>
+          GP
+          <small id="paginaTitulo">
+            <!-- Texto do título será atribuído via JS -->
+          </small>
+        </h1>
+
+      </main>
+      <!-- Fim: 'main' coloca o conteúdo da página ao centro e atribui uma largura padrão -->
+
+    </header>
+    <!-- Fim: Cabeçalho da página -->
+
+
+    <!-- =================================================================================================== -->
+
+
+    <!-- Início: Section divide a página e seções, para termos uma distribuição de conteúdo mais limpa -->
+    <section>
+
+      <!-- Início: Main coloca o conteúdo da página ao centro e atribui uma largura padrão -->
+      <main>
+
+        <h1>
+          Listagem de <strong>produtos</strong> registrados
+        </h1>
+
+        <!-- Início: CATALOGO -->
+        <div class="catalogo grade-2">
+
+          <!-- Início: container com um produto -->
+          <div class="produto">
+
+            <aside class="texto-centro">
+
+              <img class="imagem-produto centralizar"
+                   src="../img/produtos/camiseta-azul.jpg"
+                   alt="Imagem ilustrativa" />
+
+              <a class="botao botao-primario"
+                 href="editar.html?id=1">
+                EDITAR PRODUTO
+              </a>
+
+            </aside>
+
+            <aside>
+
+              <div class="padding-15-h">
+
+                <h4>
+                  Título
+                  <br />
+                  <span class="texto-primario">
+                    Camiseta Azul GP
+                  </span>
+                </h4>
+
+                <div class="grade-2">
+
+                  <div>
+                    
+                    <h4>
+                      Preço
+                      <br />
+                      <span class="texto-primario">
+                        R$ 25,00
+                      </span>
+                    </h4>
+                    
+                  </div>
+
+                  <div>
+                    
+                    <h4>
+                      Estoque
+                      <br />
+                      <span class="texto-primario">
+                        150 un.
+                      </span>                  
+                    </h4>
+                    
+                  </div>
+
+                </div>
+
+                <h4>
+                  Categoria
+                  <br />
+                  <span class="texto-primario">
+                    Vestuário
+                  </span>
+                </h4>
+
+                <h4>
+                  Descrição
+                </h4>
+                <div class="texto-primario descricao">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+
+              </div>
+
+            </aside>
+
+          </div>
+          <!-- Fim: container com um produto -->
+
+          <!-- Início: container com um produto -->
+          <div class="produto">
+
+            <aside class="texto-centro">
+
+              <img class="imagem-produto centralizar"
+                   src="../img/produtos/camiseta-branca.jpg"
+                   alt="Imagem ilustrativa" />
+
+              <a class="botao botao-primario"
+                 href="editar.html?id=2">
+                EDITAR PRODUTO
+              </a>
+
+            </aside>
+
+            <aside>
+
+              <div class="padding-15-h">
+
+                <h4>
+                  Título
+                  <br />
+                  <span class="texto-primario">
+                    Camiseta Branca GP
+                  </span>
+                </h4>
+
+                <div class="grade-2">
+
+                  <div>
+                    
+                    <h4>
+                      Preço
+                      <br />
+                      <span class="texto-primario">
+                        R$ 25,00
+                      </span>
+                    </h4>
+                    
+                  </div>
+
+                  <div>
+                    
+                    <h4>
+                      Estoque
+                      <br />
+                      <span class="texto-primario">
+                        100 un.
+                      </span>                  
+                    </h4>
+                    
+                  </div>
+
+                </div>
+
+                <h4>
+                  Categoria
+                  <br />
+                  <span class="texto-primario">
+                    Vestuário
+                  </span>
+                </h4>
+
+                <h4>
+                  Descrição
+                </h4>
+                <div class="texto-primario descricao">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+
+              </div>
+
+            </aside>
+
+          </div>
+          <!-- Fim: container com um produto -->
+
+          <!-- Início: container com um produto -->
+          <div class="produto">
+
+            <aside class="texto-centro">
+
+              <img class="imagem-produto centralizar"
+                   src="../img/produtos/camiseta-preta.jpg"
+                   alt="Imagem ilustrativa" />
+
+              <a class="botao botao-primario"
+                 href="editar.html?id=3">
+                EDITAR PRODUTO
+              </a>
+
+            </aside>
+
+            <aside>
+
+              <div class="padding-15-h">
+
+                <h4>
+                  Título
+                  <br />
+                  <span class="texto-primario">
+                    Camiseta Preta GP
+                  </span>
+                </h4>
+
+                <div class="grade-2">
+
+                  <div>
+                    
+                    <h4>
+                      Preço
+                      <br />
+                      <span class="texto-primario">
+                        R$ 25,00
+                      </span>
+                    </h4>
+                    
+                  </div>
+
+                  <div>
+                    
+                    <h4>
+                      Estoque
+                      <br />
+                      <span class="texto-primario">
+                        200 un.
+                      </span>                  
+                    </h4>
+                    
+                  </div>
+
+                </div>
+
+                <h4>
+                  Categoria
+                  <br />
+                  <span class="texto-primario">
+                    Vestuário
+                  </span>
+                </h4>
+
+                <h4>
+                  Descrição
+                </h4>
+                <div class="texto-primario descricao">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+
+              </div>
+
+            </aside>
+
+          </div>
+          <!-- Fim: container com um produto -->
+
+          <!-- Início: container com um produto -->
+          <div class="produto">
+
+            <aside class="texto-centro">
+
+              <img class="imagem-produto centralizar"
+                   src="../img/produtos/camiseta-laranja.jpg"
+                   alt="Imagem ilustrativa" />
+
+              <a class="botao botao-primario"
+                 href="editar.html?id=4">
+                EDITAR PRODUTO
+              </a>
+
+            </aside>
+
+            <aside>
+
+              <div class="padding-15-h">
+
+                <h4>
+                  Título
+                  <br />
+                  <span class="texto-primario">
+                    Camiseta Laranja GP
+                  </span>
+                </h4>
+
+                <div class="grade-2">
+
+                  <div>
+                    
+                    <h4>
+                      Preço
+                      <br />
+                      <span class="texto-primario">
+                        R$ 25,00
+                      </span>
+                    </h4>
+                    
+                  </div>
+
+                  <div>
+                    
+                    <h4>
+                      Estoque
+                      <br />
+                      <span class="texto-primario">
+                        50 un.
+                      </span>                  
+                    </h4>
+                    
+                  </div>
+
+                </div>
+
+                <h4>
+                  Categoria
+                  <br />
+                  <span class="texto-primario">
+                    Vestuário
+                  </span>
+                </h4>
+
+                <h4>
+                  Descrição
+                </h4>
+                <div class="texto-primario descricao">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+
+              </div>
+
+            </aside>
+
+          </div>
+          <!-- Fim: container com um produto -->
+
+          <!-- Início: container com um produto -->
+          <div class="produto">
+
+            <aside class="texto-centro">
+
+              <img class="imagem-produto centralizar"
+                   src="../img/produtos/camiseta-rosa.jpg"
+                   alt="Imagem ilustrativa" />
+
+              <a class="botao botao-primario"
+                 href="editar.html?id=5">
+                EDITAR PRODUTO
+              </a>
+
+            </aside>
+
+            <aside>
+
+              <div class="padding-15-h">
+
+                <h4>
+                  Título
+                  <br />
+                  <span class="texto-primario">
+                    Camiseta Rosa GP
+                  </span>
+                </h4>
+
+                <div class="grade-2">
+
+                  <div>
+                    
+                    <h4>
+                      Preço
+                      <br />
+                      <span class="texto-primario">
+                        R$ 25,00
+                      </span>
+                    </h4>
+                    
+                  </div>
+
+                  <div>
+                    
+                    <h4>
+                      Estoque
+                      <br />
+                      <span class="texto-primario">
+                        50 un.
+                      </span>                  
+                    </h4>
+                    
+                  </div>
+
+                </div>
+
+                <h4>
+                  Categoria
+                  <br />
+                  <span class="texto-primario">
+                    Vestuário
+                  </span>
+                </h4>
+
+                <h4>
+                  Descrição
+                </h4>
+                <div class="texto-primario descricao">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+
+              </div>
+
+            </aside>
+
+          </div>
+          <!-- Fim: container com um produto -->
+
+
+
+          <!-- Início: container com um produto -->
+          <div class="produto">
+
+            <aside class="texto-centro">
+
+              <img class="imagem-produto centralizar"
+                   src="../img/produtos/camiseta-verde.jpg"
+                   alt="Imagem ilustrativa" />
+
+              <a class="botao botao-primario"
+                 href="editar.html?id=6">
+                EDITAR PRODUTO
+              </a>
+
+            </aside>
+
+            <aside>
+
+              <div class="padding-15-h">
+
+                <h4>
+                  Título
+                  <br />
+                  <span class="texto-primario">
+                    Camiseta Verde GP
+                  </span>
+                </h4>
+
+                <div class="grade-2">
+
+                  <div>
+                    
+                    <h4>
+                      Preço
+                      <br />
+                      <span class="texto-primario">
+                        R$ 25,00
+                      </span>
+                    </h4>
+                    
+                  </div>
+
+                  <div>
+                    
+                    <h4>
+                      Estoque
+                      <br />
+                      <span class="texto-primario">
+                        50 un.
+                      </span>                  
+                    </h4>
+                    
+                  </div>
+
+                </div>
+
+                <h4>
+                  Categoria
+                  <br />
+                  <span class="texto-primario">
+                    Vestuário
+                  </span>
+                </h4>
+
+                <h4>
+                  Descrição
+                </h4>
+                <div class="texto-primario descricao">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+
+              </div>
+
+            </aside>
+
+          </div>
+          <!-- Fim: container com um produto -->
+
+        </div>
+        <!-- Fim: CATALOGO -->
+
+      </main>
+      <!-- Fim: Main coloca o conteúdo da página ao centro e atribui uma largura padrão -->
+
+    </section>
+    <!-- Fim: Section divide a página e seções, para termos uma distribuição de conteúdo mais limpa -->
+
+
+    <!-- =================================================================================================== -->
+
+
+    <!-- Início: rodapé de páginas -->
+    <footer>
+
+      <!-- Início: 'main' coloca o conteúdo da página ao centro e atribui uma largura padrão -->
+      <main>
+
+        <span class="direitos-copia">						
+          &copy;
+          <strong>
+            [L|S]
+          </strong>
+          Tecnologia e Inovação
+          -
+          <span id="exibirAnoAtual">
+            <!-- O ano atual será inserido aqui com JS -->
+          </span>
+        </span>
+
+      </main>
+      <!-- Fim: 'main' coloca o conteúdo da página ao centro e atribui uma largura padrão -->
+
+    </footer>
+    <!-- Fim: rodapé de páginas -->
+
+
+    <!-- =================================================================================================== -->
+
+
+    <!-- JS base, com os comandos comuns entre todas as páginas -->
+    <script type="text/javascript" src="../js/gp-base.js"></script>
+    <script type="text/javascript" src="../js/gp-produtos-catalogo.js"></script>
+
+  </body>
+
+</html>

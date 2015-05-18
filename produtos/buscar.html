@@ -15,10 +15,10 @@
     <meta name="description" content="Gerencie seus produtos de maneira simples e intuitiva" />
 
     <!-- Diz quem é o autor da página, para fins de compartilhamento e documentação -->
-    <meta name="author" content="Luciano Lourenço" />
+    <meta name="author" content="@LucianoLourenco and @jSilverize" />
 
     <title>
-      GP | Cadastrar Produto
+      GP | Buscar Produtos
     </title>
 
     <!-- Ícone que aparece na aba browser -->
@@ -30,12 +30,11 @@
 
     <!-- CSS exclusivo para esta página, com regras aplicadas somente nela -->
     <link rel="stylesheet" type="text/css" href="../css/gp-formularios.css" />
-    <link rel="stylesheet" type="text/css" href="../css/gp-cropbox.css" />
 
   </head>
 
   <body>
-    
+
     <!-- =================================================================================================== -->
 
 
@@ -48,20 +47,12 @@
         <label for="control-nav" class="control-nav-close"></label>
 
         <nav>
-          <ul class="l2">
+          <ul>
             <li>
               <a href="../index.html"
                  title=""
                  >
                 Home
-              </a>
-            </li>
-
-            <li>
-              <a href=""
-                 title=""
-                 >
-                Ajuda
               </a>
             </li>
 
@@ -73,13 +64,6 @@
               </a>
             </li>
 
-            <li>
-              <a href=""
-                 title=""
-                 >
-                Registrar-se
-              </a>
-            </li>
           </ul>
         </nav>
 
@@ -120,12 +104,11 @@
       <!-- Início: Main coloca o conteúdo da página ao centro e atribui uma largura padrão -->
       <main>
 
-        <h1>					
-          Dados do seu novo produto
+        <h1>
+          <strong>Encontre</strong> seu produto
         </h1>
 
-        <form class="formulario formulario-produtos"
-              method="POST" action="visualizar.html">
+        <div class="formulario formulario-produtos">
 
           <!-- Início: GRADE-2 proporciona uma linha com 2 colunas -->
           <div class="grade-2 menu-produtos">
@@ -135,48 +118,37 @@
 
               <div class="padding-10-h">
 
+                <form method="GET" action="catalogo.html">
 
-                <label for="produtoTitulo">
-                  Título:
-                </label>              
-                <input tabindex="1" type="text"
-                       id="produtoTitulo" name="produtoTitulo"
-                       placeholder="Ex.: Camiseta Estampada" />
+                  <label for="produtoTitulo">
+                    Buscar por título:
+                  </label>              
+                  <input tabindex="1" type="text"
+                         id="produtoTitulo" name="titulo"
+                         placeholder="Ex.: Camiseta Estampada" />
 
+                  <button type="submit" tabindex="2" class="botao">
+                    Buscar
+                    &uparrow;
+                  </button>
 
-                <label for="produtoPreco">
-                  Preço unitário:
-                </label>              
-                <input tabindex="2" type="text"
-                       id="produtoPreco" name="produtoPreco"
-                       placeholder="Ex.: R$ 25,00" />
+                </form>
 
+                <form method="GET" action="catalogo.html">
 
-                <label for="produtoQuantidade">
-                  Quantidade em estoque:
-                </label>
-                <input tabindex="3" type="number"
-                       id="produtoQuantidade" name="produtoQuantidade"
-                       placeholder="Ex.: 150" />
+                  <label for="produtoPreco">
+                    Buscar por preço:
+                  </label>              
+                  <input tabindex="3" type="text"
+                         id="produtoPreco" name="preco"
+                         placeholder="Ex.: R$ 25,00" />
 
+                  <button type="submit" tabindex="4" class="botao botao-primario">
+                    Buscar
+                    &uparrow;
+                  </button>
 
-                <label for="produtoCategoria">
-                  Categoria:
-                </label>
-                <select tabindex="4"
-                        id="produtoCategoria" name="produtoCategoria">
-                  <option>
-                    Criar as options via JSON
-                  </option>
-                </select>
-
-
-                <label for="produtoDescricao">
-                  Descrição:
-                </label>
-                <textarea tabindex="5"
-                          id="produtoDescricao" name="produtoDescricao"
-                          rows="6" placeholder="Ex.: Tecido algodão com acabamento bla bla bla"></textarea>
+                </form>
 
               </div>
 
@@ -188,38 +160,39 @@
 
               <div class="padding-10-h">
 
+                <form method="GET" action="catalogo.html">
 
-                <label for="produtoImagem">
-                  Imagem para exibição:
-                </label>
-                <input tabindex="6" type="file" 
-                       id="produtoImagem" name="produtoImagem"
-                       />
+                  <label for="produtoCategoria">
+                    Buscar por categoria:
+                  </label>
+                  <select tabindex="5"
+                          id="produtoCategoria" name="categoria">
+                    <!-- As options serão criadas via JS -->
+                  </select>
 
-                <div style="padding: 15px 0px;"></div>
-
-                <div class="cropped oculto"></div>
-
-                <div class="crop-container oculto">
-
-                  <div class="imageBox">
-                    <div class="thumbBox"></div>
-                    <div class="spinner" style="display: none">
-                      Carregando...
-                    </div>
-                  </div>
-
-                  <button type="button" class="botao" id="btnZoomOut">
-                    -
-                  </button>
-                  <button type="button" class="botao" id="btnZoomIn">
-                    +
-                  </button>
-                  <button type="button" class="botao" id="btnCrop">
-                    Cortar Imagem
+                  <button type="submit" tabindex="6" class="botao botao-primario">
+                    Buscar
+                    &uparrow;
                   </button>
 
-                </div>
+                </form>
+
+                <form method="GET" action="catalogo.html">
+
+                  <label for="produtoDescricao">
+                    Buscar por trecho de descrição:
+                  </label>
+                  <input tabindex="7"
+                         type="text"
+                         id="produtoDescricao" name="descricao"
+                         placeholder="Ex.: Tecido algodão com acabamento bla bla bla" />
+
+                  <button type="submit" tabindex="8" class="botao">
+                    Buscar
+                    &uparrow;
+                  </button>
+
+                </form>
 
               </div>
 
@@ -229,49 +202,7 @@
           </div>
           <!-- Fim: GRADE-2 proporciona uma linha com 2 colunas -->
 
-          
-          <br style="clear: both;" />
-          
-
-          <!-- Início: GRADE-2 proporciona uma linha com 2 colunas -->
-          <div class="grade-2 menu-produtos">
-
-            <!-- Início: Coluna #1 -->
-            <div>
-
-              <div class="padding-15-v">
-
-                <button type="reset" tabindex="8" id="zerar" class="botao botao-grande centralizar">
-                  &times;
-                  Limpar
-                </button>
-
-              </div>
-
-            </div>
-            <!-- Fim: Coluna #1 -->
-
-            <!-- Início: Coluna #2 -->
-            <div>
-
-              <div class="padding-15-v">
-
-                <button type="submit" tabindex="7" class="botao botao-grande botao-primario centralizar">
-                  Salvar
-                  &uparrow;
-                </button>
-
-              </div>
-
-            </div>
-            <!-- Fim: Coluna #2 -->
-
-          </div>
-          <!-- Fim: GRADE-2 proporciona uma linha com 2 colunas -->
-          
-          
-
-        </form>
+        </div>
 
       </main>
       <!-- Fim: Main coloca o conteúdo da página ao centro e atribui uma largura padrão -->
@@ -315,8 +246,7 @@
     <script type="text/javascript" src="../js/gp-base.js"></script>
 
     <!-- JS exclusivo para esta página -->
-    <script type="text/javascript" src="../js/gp-cropbox.js"></script>    
-    <script type="text/javascript" src="../js/gp-cropbox-config.js"></script>
+    <script type="text/javascript" src="../js/gp-produtos.js"></script>
 
   </body>
 
