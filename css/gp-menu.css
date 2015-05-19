@@ -107,7 +107,11 @@ input#control-nav {
     bottom: 0;
     width: 250px;
     border-left: 1px solid #ccc;
-    background: #fff;
+    background-color: #fff;
+    background-image: url('../img/gp-logo.svg');
+    background-repeat: no-repeat;
+    background-size: 125px 125px;
+    background-position: center 95%;
     overflow-x: auto;
     z-index: 2;
     -webkit-transition: all 500ms ease;

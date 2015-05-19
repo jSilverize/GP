@@ -12,7 +12,7 @@
     "id": 2,
     "src": "../img/produtos/camiseta-branca.jpg",
     "titulo": "Camiseta Branca GP",
-    "preco": "25,00",
+    "preco": "20,00",
     "estoque": "50",
     "categoria": "Vestuário",
     "descricao": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
@@ -21,7 +21,7 @@
     "id": 3,
     "src": "../img/produtos/camiseta-preta.jpg",
     "titulo": "Camiseta Preta GP",
-    "preco": "25,00",
+    "preco": "20,00",
     "estoque": "75",
     "categoria": "Vestuário",
     "descricao": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."

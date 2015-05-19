@@ -30,30 +30,61 @@ function listarProdutosBusca() {
     urlQuery = "" + urlQuery.replace("=", ":");
     urlQuery = "" + urlQuery.replace("%2C", ",");
     urlQuery = "" + urlQuery.replace("+", " ");
+    urlQuery = "" + urlQuery.replace("%C3%A1", "á");
+    urlQuery = "" + urlQuery.replace("%C3%AD", "í");
+    urlQuery = "" + urlQuery.replace("%C3%A7", "ç");
   }
 
+  urlQuery = urlQuery.substring(urlQuery.indexOf(":") + 1);
+  console.log("Valor de busca: " + urlQuery);
+
   var lista = JSON.parse(xhr.responseText);
+  var encontrou = false;
+
+  var exibirTextoBusca = document.getElementById("textoBusca");
 
   for (var i in lista) {
     var produto = lista[i];
-    urlQuery = urlQuery.substring(urlQuery.indexOf(":") + 1);
-    console.log("Valor de busca: " + urlQuery);
 
     if (produto.titulo.indexOf(urlQuery) > -1) {
       formatarProduto(produto);
+      encontrou = true;
     }
 
     if (produto.preco.indexOf(urlQuery) > -1) {
       formatarProduto(produto);
+      encontrou = true;
     }
 
     if (produto.categoria.indexOf(urlQuery) > -1) {
       formatarProduto(produto);
+      encontrou = true;
     }
 
     if (produto.descricao.indexOf(urlQuery) > -1) {
       formatarProduto(produto);
+      encontrou = true;
     }
+
+  }
+
+  if (encontrou) {
+
+    exibirTextoBusca.textContent = 'por "' + urlQuery + '"';
+
+  } else {
+    console.info("Exibir mensagem dizendo que não foi possível encontrar produtos.");
+
+    var secaoListarProdutos = document.getElementById("listarProdutos");
+    secaoListarProdutos.setAttribute("class", "oculto");
+
+    var secaoInformarErroBusca = document.getElementById("informarErroBusca");
+    secaoInformarErroBusca.classList.remove("oculto");
+
+    var textoBusca1 = document.getElementById("textoBusca1");
+    var textoBusca2 = document.getElementById("textoBusca2");
+    textoBusca1.textContent = "" + urlQuery;
+    textoBusca2.textContent = "" + urlQuery;
 
   }
 

@@ -99,13 +99,14 @@
 
 
     <!-- Início: Section divide a página e seções, para termos uma distribuição de conteúdo mais limpa -->
-    <section>
+    <section id="listarProdutos">
 
       <!-- Início: Main coloca o conteúdo da página ao centro e atribui uma largura padrão -->
       <main>
 
         <h1>
-          Listagem de <strong>produtos</strong> registrados
+          Listagem de <strong>produtos</strong>
+          <span id="textoBusca"></span>
         </h1>
 
         <!-- Início: CATALOGO -->
@@ -115,6 +116,36 @@
 
         </div>
         <!-- Fim: CATALOGO -->
+
+      </main>
+      <!-- Fim: Main coloca o conteúdo da página ao centro e atribui uma largura padrão -->
+
+    </section>
+    <!-- Fim: Section divide a página e seções, para termos uma distribuição de conteúdo mais limpa -->
+
+
+    <!-- Início: Section divide a página e seções, para termos uma distribuição de conteúdo mais limpa -->
+    <section id="informarErroBusca" class="oculto">
+
+      <!-- Início: Main coloca o conteúdo da página ao centro e atribui uma largura padrão -->
+      <main>
+
+        <h1>
+          <strong>Ops</strong>! Não encontramos resultados por
+          "<strong id="textoBusca1"></strong>" :/
+        </h1>
+
+        <p>
+          Lamentamos, mas não foi possível exibir resultados válidos para a busca
+          por <strong id="textoBusca2"></strong>.
+        </p>
+        
+        <p>
+          Pedimos que tente novamente a partir do recurso
+          <a href="buscar.html">Buscar &amp; Editar</a>
+          ou se preferir visite o nosso
+          <a href="catalogo.html">Catálogo Completo</a>.
+        </p>
 
       </main>
       <!-- Fim: Main coloca o conteúdo da página ao centro e atribui uma largura padrão -->

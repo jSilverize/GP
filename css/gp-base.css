@@ -145,7 +145,7 @@ button, input, select, textarea {
 
 /* Definicoes padrao do Cabecalho */
 header {
-  box-shadow: inset 0px -10px 8px -10px #ffffff;
+  box-shadow: inset 0px -10px 8px -10px #626262;
   background-color: #005FED;
   color: #ffffff;
   background-image: url('../img/backgrounds/triangles-blue.png');
@@ -318,3 +318,5 @@ section main h1::after {
 .texto-primario {
   color: #2B80FF;
 }
+
+#paginaTitulo {}
