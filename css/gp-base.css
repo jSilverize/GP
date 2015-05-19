@@ -319,4 +319,8 @@ section main h1::after {
   color: #2B80FF;
 }
 
-#paginaTitulo {}
+@media(max-width: 468px) {
+  #paginaTitulo {
+    display: block;
+  }
+}
