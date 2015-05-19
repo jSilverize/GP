@@ -25,6 +25,38 @@ function listarProdutos() {
 
 function listarProdutosBusca() {
 
+  for (var j in urlQuery) {
+    urlQuery = "" + urlQuery.replace("?", "");
+    urlQuery = "" + urlQuery.replace("=", ":");
+    urlQuery = "" + urlQuery.replace("%2C", ",");
+    urlQuery = "" + urlQuery.replace("+", " ");
+  }
+
+  var lista = JSON.parse(xhr.responseText);
+
+  for (var i in lista) {
+    var produto = lista[i];
+    urlQuery = urlQuery.substring(urlQuery.indexOf(":") + 1);
+    console.log("Valor de busca: " + urlQuery);
+
+    if (produto.titulo.indexOf(urlQuery) > -1) {
+      formatarProduto(produto);
+    }
+
+    if (produto.preco.indexOf(urlQuery) > -1) {
+      formatarProduto(produto);
+    }
+
+    if (produto.categoria.indexOf(urlQuery) > -1) {
+      formatarProduto(produto);
+    }
+
+    if (produto.descricao.indexOf(urlQuery) > -1) {
+      formatarProduto(produto);
+    }
+
+  }
+
 }
 
 function formatarProduto(prod) {
@@ -57,8 +89,95 @@ function formatarProduto(prod) {
 
   // 7) introduz o botao dentro da ASIDE [passo 3]
   produtoImagemAside.appendChild(produtoBotaoEditar);
-  
-  // 15) adiciona o produto formatado na pagina
+
+  // 8) cria a ASIDE que recebera as informacoes restantes do produto
+  var produtoPropriedades = document.createElement("aside");
+
+  // 9) introduz a ASIDE dentro da DIV [passo 1]
+  produtoDiv.appendChild(produtoPropriedades);
+
+  // 10) cria a div que aplica espacamento interno nas informacoes restantes do produto
+  var produtoPropriedadesDiv = document.createElement("div");
+  produtoPropriedadesDiv.setAttribute("class", "padding-15-h");
+
+  // 11) introduz a DIV dentro da ASIDE [passo 9]
+  produtoPropriedades.appendChild(produtoPropriedadesDiv);
+
+
+  var produtoTituloLabel = document.createElement("h4");
+  produtoTituloLabel.textContent = "Título";
+
+  var produtoTitulo = document.createElement("span");
+  produtoTitulo.setAttribute("class", "texto-primario");
+  produtoTitulo.textContent = "" + prod.titulo;
+
+  produtoTituloLabel.appendChild(produtoTitulo);
+
+  produtoPropriedadesDiv.appendChild(produtoTituloLabel);
+
+
+  var produtoPrecoLabel = document.createElement("h4");
+  produtoPrecoLabel.textContent = "Preço";
+
+  var produtoPreco = document.createElement("span");
+  produtoPreco.setAttribute("class", "texto-primario");
+  produtoPreco.textContent = "R$ " + prod.preco;
+
+  produtoPrecoLabel.appendChild(produtoPreco);
+
+
+  var produtoEstoqueLabel = document.createElement("h4");
+  produtoEstoqueLabel.textContent = "Estoque";
+
+  var produtoEstoque = document.createElement("span");
+  produtoEstoque.setAttribute("class", "texto-primario");
+  produtoEstoque.textContent = "" + prod.estoque + "un.";
+
+  produtoEstoqueLabel.appendChild(produtoEstoque);
+
+
+  var grade = document.createElement("div");
+  grade.setAttribute("class", "grade-2");
+
+  var gradeInfo1 = document.createElement("div");
+  gradeInfo1.appendChild(produtoPrecoLabel);
+
+  var gradeInfo2 = document.createElement("div");
+  gradeInfo2.appendChild(produtoEstoqueLabel);
+
+  grade.appendChild(gradeInfo1);
+  grade.appendChild(gradeInfo2);
+
+  produtoPropriedadesDiv.appendChild(grade);
+
+
+  var produtoCategoriaLabel = document.createElement("h4");
+  produtoCategoriaLabel.textContent = "Categoria";
+
+  var produtoCategoria = document.createElement("span");
+  produtoCategoria.setAttribute("class", "texto-primario");
+  produtoCategoria.textContent = "" + prod.categoria;
+
+  produtoCategoriaLabel.appendChild(produtoCategoria);
+
+  produtoPropriedadesDiv.appendChild(produtoCategoriaLabel);
+
+
+  var produtoDescricaoLabel = document.createElement("h4");
+  produtoDescricaoLabel.textContent = "Descrição";
+
+  var produtoDescricao = document.createElement("div");
+  produtoDescricao.textContent = "" + prod.descricao;
+  produtoDescricao.setAttribute("class", "descricao texto-primario");
+
+  produtoPropriedadesDiv.appendChild(produtoDescricaoLabel);
+  produtoPropriedadesDiv.appendChild(produtoDescricao);
+
+
+  produtoDiv.appendChild(produtoPropriedades);
+
+
+  // adiciona o produto formatado na pagina
   localGerarCatalogo.appendChild(produtoDiv);
-  
+
 }

@@ -91,3 +91,7 @@
   margin: 12.5px;
   border: 1px solid #e7e7e7;
 }
+
+.produto h4 > span {
+    display: block;
+}
